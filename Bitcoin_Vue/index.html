@@ -1,0 +1,33 @@
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Bitocoin</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <div id="app">
+            <h2>
+                Bitocoin Price
+            </h2>
+            <section v-if="hasError">
+                Error
+            </section>
+            <section v-else>
+                <div v-if="loading">
+                    Loading...
+                </div>
+                <div v-else>
+                    <ul v-cloak>
+                        <li v-for="(rate, currency) in bpi">
+                            {{currency}}:{{rate.rate_float | currencyDecimal}}
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <script src="js/vue.js"></script> 
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

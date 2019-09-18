@@ -1,0 +1,22 @@
+p{
+    font-size: 3rem;
+    color:red;
+}
+#app ul{
+    list-style: none;
+}
+
+
+#app li > span.done{
+    text-decoration: line-through;
+}
+
+body{
+    margin-left: 40%;
+    margin-right: 40%
+}
+
+li a, li p{
+    font-size: 1.2em;
+    color: red;
+}
